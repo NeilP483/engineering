@@ -1,24 +1,27 @@
-body{
+body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin: 0px;
+    margin: 0;
+    background: #fafafa;
     overflow-x: hidden;
     overflow-y: scroll;
 }
 
-.wrap{
+.wrap {
     display: flex;
-    background-color: pink;
+    justify-content: center;
+    background-color: #f0f0f0;
     background-image: url("https://th.bing.com/th/id/OIP.YRaKbLaZsVf9FGSllSANOgHaFj?rs=1&pid=ImgDetMain");
-    background-size: 100%;
+    background-size: cover;
     width: 100vw;
 }
 
-.placeholder{
+.placeholder {
     flex-basis: 400px;
     flex-grow: 1;
     flex-shrink: 1;
 }
-.banner h1{
+
+.banner h1 {
     font-size: 4em;
     background-image: url("https://www.twi-global.com/image-library/hero/engineering-design-process.jpg");
     background-size: 100vw 200%;
@@ -26,72 +29,83 @@ body{
     background-color: aqua;
     width: 100vw;
     text-align: center;
-    margin-top: 0px;
+    margin-top: 0;
     padding-top: 2em;
     padding-bottom: 2em;
-    margin-bottom: 0px;
-    padding-left: 0px;
-    padding-right: 0px;
+    margin-bottom: 0;
 }
 
-.banner h2{
+.banner h2 {
     text-align: center;
-    margin-top: 0px;
+    margin-top: 0;
     padding-top: 1em;
     padding-bottom: 1em;
     color: white;
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 
-.sub{
+.sub {
     width: 100vw;
     background-color: rgb(0, 0, 0);
 }
 
-.main{
+.main {
     display: flex;
     flex-direction: column;
     background-color: white;
     margin: auto;
     text-align: left;
-    padding: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     flex-basis: 800px;
     flex-grow: 2;
     flex-shrink: 0;
 }
 
-h2{
+h2 {
     font-size: 2.5em;
 }
 
-h3{
+h3 {
     font-size: 2em;
 }
 
-.banner{
+.banner {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#steps{
-    border-bottom: black 1px solid;
+nav ul{
+    display: flex;
+    justify-content: left;
+    list-style-type: none;
+    width: 100vw;
+    position: sticky;
 }
 
-#steps ol li, #steps p{
+nav ul li{
+    padding: 5px;
+}
+
+#steps {
+    border-bottom: 1px solid black;
+}
+
+#steps ol li, #steps p {
     font-size: 1.3em;
 }
 
-section h2{
+section h2 {
     text-align: center;
 }
 
-#steps img{
+#steps img {
     float: right;
     height: 20em;
 }
 
-section ul{
+section ul {
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
@@ -99,83 +113,90 @@ section ul{
     padding: 0;
 }
 
-section ul li{
+section ul li {
     border-radius: 0.5em;
-    border: black 1px solid;
+    border: 1px solid black;
     width: 20vw;
-    margin:5px;
+    margin: 5px;
     overflow-x: hidden;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-section ul li img{
-    width: 20vw;
+section ul li img {
+    width: 100%;
+    transition: transform 0.3s ease;
 }
 
-section ul li p{
+section ul li img:hover {
+    transform: scale(1.1);
+}
+
+section ul li p {
     font-size: 1.5em;
     font-weight: bold;
-    padding: 5px;
+    padding: 10px;
     text-align: center;
 }
 
-footer{
-    padding: 5px;
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
 }
 
 @media only screen and (max-width: 55em) {
-    .main{
+    .main {
         flex-basis: 100vw;
         flex-shrink: 1;
         padding: 10px;
     }
-    .placeholder{
-        flex-basis: 0px;
+    .placeholder {
+        flex-basis: 0;
     }
-    #steps img{
+    #steps img {
         display: none;
     }
-    section ul li{
-        width: 25vw;
+    section ul li {
+        width: 45%;
     }
-    section ul li img{
-        width: 25vw;
-    } section ul li p{
+    section ul li img {
+        width: 100%;
+    }
+    section ul li p {
         font-size: 1.3em;
     }
 }
 
 @media only screen and (max-width: 25em) {
-    .banner h1{
+    .banner h1 {
         font-size: 2em;
     }
-
-    .banner h2, h3{
+    .banner h2, h3 {
         font-size: 1.5em;
     }
-
-    h2{
+    h2 {
         font-size: 2em;
+    }
+    h3 {
+        font-size: 1.5em;
     }
     
-    h3{
-        font-size: 1.5em;
-    }
 }
 
 @media only screen and (max-width: 32em) {
-    section ul li{
+    section ul li {
         border-radius: 0.5em;
-        border: black 1px solid;
+        border: 1px solid black;
         width: 70vw;
-        margin:5px;
+        margin: 5px;
         overflow-x: hidden;
     }
-    
-    section ul li img{
+    section ul li img {
         width: 70vw;
     }
-    
-    section ul li p{
+    section ul li p {
         font-size: 1em;
         font-weight: bold;
         padding: 5px;
