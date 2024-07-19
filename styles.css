@@ -78,7 +78,7 @@ h3{
     border-bottom: black 1px solid;
 }
 
-#steps p{
+#steps ol li, #steps p{
     font-size: 1.3em;
 }
 
@@ -118,7 +118,22 @@ section ul li p{
     text-align: center;
 }
 
-@media only screen and (max-width: 50em) {
+footer{
+    padding: 5px;
+}
+
+@media only screen and (max-width: 55em) {
+    .main{
+        flex-basis: 100vw;
+        flex-shrink: 1;
+        padding: 10px;
+    }
+    .placeholder{
+        flex-basis: 0px;
+    }
+    #steps img{
+        display: none;
+    }
     section ul li{
         width: 25vw;
     }
@@ -137,18 +152,33 @@ section ul li p{
     .banner h2, h3{
         font-size: 1.5em;
     }
+
+    h2{
+        font-size: 2em;
+    }
+    
+    h3{
+        font-size: 1.5em;
+    }
 }
 
-@media only screen and (max-width: 900px) {
-    .main{
-        flex-basis: 100vw;
-        flex-shrink: 1;
-        padding: 10px;
+@media only screen and (max-width: 32em) {
+    section ul li{
+        border-radius: 0.5em;
+        border: black 1px solid;
+        width: 70vw;
+        margin:5px;
+        overflow-x: hidden;
     }
-    .placeholder{
-        flex-basis: 0px;
+    
+    section ul li img{
+        width: 70vw;
     }
-    #steps img{
-        display: none;
+    
+    section ul li p{
+        font-size: 1em;
+        font-weight: bold;
+        padding: 5px;
+        text-align: center;
     }
 }

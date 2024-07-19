@@ -1,46 +1,100 @@
 <!DOCTYPE html>
 
-<html lang="ENG">
+<html lang="en">
     <head>
         <title>Engineering Hub</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="styles.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script>
+            function sendEmail() {
+                var name = encodeURIComponent(document.getElementById('name').value);
+                var email = encodeURIComponent(document.getElementById('email').value);
+                var message = encodeURIComponent(document.getElementById('message').value);
+                var subject = encodeURIComponent("Contact from " + name);
+                var emailBody = "Name: " + name + "%0D%0AEmail: " + email + "%0D%0AMessage: " + message;
+
+            
+                var href = `https://mail.google.com/mail/?view=cm&fs=1&to=neilp235094@gmail.com&su=${subject}&body=${emailBody}`;
+                window.open(href, '_blank');
+            }
+        </script>
     </head>
     <body>
-        <div class="banner">
+        <header class="banner">
             <h1>Engineering Hub</h1>
-            <div class="sub"><h2>Get inspiration from or contribute ideas you'd like to make reality</h2></div>
-        </div>
-        <div class="wrap">
-            <div class="placeholder"></div>
-            <div class="main">
-                <section id="steps">
-                    <img src="https://thumbs.dreamstime.com/b/step-one-two-three-button-92422320.jpg">
-                    <h3>In three easy steps</h2>
-                    <p>1. &nbsp;Find or choose the main topic (If you have an idea for a new topic, let us know at <a href="mailto:neilp235094@gmail.com">neilp235094@gmail.com)</a></p>
-                    <p>2. &nbsp;Find or create a discussion</p>
-                    <p>3. &nbsp;Add or work to implement an idea you find interesting</p>
+            <div class="sub">
+                <h2>Get inspiration from or contribute ideas you'd like to make reality</h2>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#steps">How It Works</a></li>
+                    <li><a href="#topics">Main Topics</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="wrap">
+            <aside class="placeholder"></aside>
+            <section class="main">
+                <article id="steps">
+                    <img src="https://thumbs.dreamstime.com/b/step-one-two-three-button-92422320.jpg" alt="Three easy steps image">
+                    <h2>In three easy steps</h2>
+                    <ol>
+                        <li>Find or choose the main topic (If you have an idea for a new topic, let us know at <a href="mailto:neilp235094@gmail.com">neilp235094@gmail.com</a>)</li>
+                        <li>Find or create a discussion</li>
+                        <li>Add or work to implement an idea you find interesting</li>
+                    </ol>
                     <p>That's it!</p>
-                </section>
+                </article>
 
-                <section>
+                <article id="topics">
                     <h2>Main Topics</h2>
-
                     <ul>
                         <li>
-                            <img src="https://th.bing.com/th/id/R.1c417e8e6fa43825cbcc01ddae72c97d?rik=Bo7RHflu5P81hw&pid=ImgRaw&r=0">
+                            <img src="https://th.bing.com/th/id/R.1c417e8e6fa43825cbcc01ddae72c97d?rik=Bo7RHflu5P81hw&pid=ImgRaw&r=0" alt="Global Warming image">
                             <p>Global Warming</p>
                         </li>
-                        <li><p>Local Inequality</p></li>
-                        <li><p>Accessability</p></li>
-                        <li><p>Medicine</p></li>
-                        <li><p>Justice</p></li>
+                        <li>
+                            <p>Local Inequality</p>
+                        </li>
+                        <li>
+                            <p>Accessibility</p>
+                        </li>
+                        <li>
+                            <p>Medicine</p>
+                        </li>
+                        <li>
+                            <p>Justice</p>
+                        </li>
                     </ul>
-                
-                </section>
-            </div>
-            <div class="placeholder"></div>
-        </div>
+                </article>
+
+                <article id="about">
+                    <h2>About Us</h2>
+                    <p>Welcome to Engineering Hub, a platform where innovative minds come together to share and develop ideas that can make a real difference in the world. Whether you are passionate about tackling global challenges like climate change or addressing local issues such as inequality, we provide the resources and community support to help you turn your ideas into reality.</p>
+                    <p>Our mission is to foster collaboration and inspire creativity by connecting people from diverse backgrounds and expertise. Join us and be part of a movement that believes in the power of engineering and technology to drive positive change.</p>
+                </article>
+
+                <article id="contact">
+                    <h2>Contact Us</h2>
+                    <form onsubmit="sendEmail(); return false;">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required><br><br>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required><br><br>
+                        <label for="message">Message:</label><br>
+                        <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+                        <input type="submit" value="Send">
+                        <input type="reset" value="Reset">
+                    </form>
+                </article>
+            </section>
+            <aside class="placeholder"></aside>
+        </main>
+        <footer>
+            <p>&copy; 2024 Engineering Hub. All rights reserved.</p>
+        </footer>
     </body>
 </html>
