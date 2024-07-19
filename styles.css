@@ -108,7 +108,7 @@ section ul li{
 }
 
 section ul li img{
-    max-width: 20vw;
+    width: 20vw;
 }
 
 section ul li p{
@@ -119,16 +119,13 @@ section ul li p{
 }
 
 @media only screen and (max-width: 50em) {
-    section ul li, section ul li img, section ul li p{
-        font-size: 1.3em;
+    section ul li{
         width: 25vw;
     }
-}
-
-@media only screen and (max-width: 50em) {
-    section ul li p{
+    section ul li img{
+        width: 25vw;
+    } section ul li p{
         font-size: 1.3em;
-        width: 50vw;
     }
 }
 
