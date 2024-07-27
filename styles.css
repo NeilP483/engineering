@@ -10,7 +10,7 @@ body {
     background-color: #f0f0f0;
     background-image: url("https://th.bing.com/th/id/OIP.YRaKbLaZsVf9FGSllSANOgHaFj?rs=1&pid=ImgDetMain");
     background-size: cover;
-    width: 100vw;
+    width: 100%;
 }
 
 .placeholder {
@@ -25,7 +25,7 @@ body {
     background-size: 100vw 200%;
     background-position: 0% 100%;
     background-color: aqua;
-    width: 100vw;
+    width: 100%;
     text-align: center;
     margin-top: 0;
     padding-top: 2em;
@@ -43,7 +43,7 @@ body {
 }
 
 .sub {
-    width: 100vw;
+    width: 100%;
     background-color: rgb(0, 0, 0);
 }
 
@@ -77,10 +77,30 @@ h3 {
 nav{
     padding: 0px;
     margin: 0px;
+    overflow-x: hidden;
     position: -webkit-sticky;
     position: sticky;
     top: 0px;
     display: block;
+}
+
+#contact form{
+    max-width: 24em;
+    border: 1px solid;
+    padding: 10px;
+    margin: auto;
+}
+
+#contact form div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+#contact form div textarea{
+    width: 100%;
 }
 
 nav ul{
@@ -170,7 +190,7 @@ footer {
 
 @media only screen and (max-width: 55em) {
     .main {
-        flex-basis: calc(100vw - 10px);
+        flex-basis: calc(100% - 10px);
         flex-shrink: 1;
         padding: 10px;
     }
